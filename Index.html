@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Logistics Software Development | Advanced Consulting LLC</title>
+    <meta name="description" content="Custom logistics software development tailored to your business. We build TMS, WMS, fleet management, and supply chain solutions that reduce costs and boost efficiency.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .cta-button {
+            background: #4a6fa5;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background: #3d5a87;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 111, 165, 0.3);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4a6fa5 0%, #3d5a87 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .cta-button {
+            background: white;
+            color: #4a6fa5;
+            font-size: 18px;
+            padding: 15px 40px;
+        }
+
+        .hero .cta-button:hover {
+            background: #f0f0f0;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: -30px auto 50px;
+        }
+
+        .pain-points {
+            background: white;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pain-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .pain-card h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .solutions {
+            background: #f8f9fa;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .solution-card h3 {
+            color: #4a6fa5;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .solution-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .benefits {
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .process {
+            background: linear-gradient(135deg, #4a6fa5 0%, #3d5a87 100%);
+            color: white;
+        }
+
+        .process .section-title {
+            color: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .step-number {
+            font-size: 48px;
+            font-weight: 700;
+            opacity: 0.5;
+            margin-bottom: 10px;
+        }
+
+        .process-step h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .form-section {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4a6fa5;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            margin: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-section p {
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .solution-grid,
+            .pain-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="advanced-consulting-logo.png" alt="Advanced Consulting LLC" class="logo" style="width: 280px; height: auto;">
+                </div>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Custom Logistics Software Development</h1>
+            <p>Transform your supply chain operations with tailored software solutions. We build powerful logistics platforms that streamline operations, reduce costs, and scale with your business.</p>
+            <a href="#contact" class="cta-button">Request Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">Is Your Current System Holding You Back?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>Manual Processes Everywhere</h3>
+                    <p>Hours wasted on data entry, spreadsheets, and disconnected systems that don't communicate with each other.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Limited Visibility</h3>
+                    <p>No real-time tracking of shipments, inventory, or fleet operations. You're always reacting, never proactive.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Vendor Lock-In</h3>
+                    <p>Expensive licensing fees, slow customization, and vendors who are impossible to reach when you need them.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Scaling Problems</h3>
+                    <p>Your business is growing, but your software can't keep up. Adding new features takes months and costs a fortune.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions">
+        <div class="container">
+            <h2 class="section-title">Our Custom Logistics Solutions</h2>
+            <p class="section-subtitle">We build software specifically designed for your logistics operations and workflows</p>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3>Transportation Management Systems (TMS)</h3>
+                    <p>Optimize route planning, carrier selection, and freight auditing. Track shipments in real-time and reduce transportation costs by up to 30%.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Warehouse Management Systems (WMS)</h3>
+                    <p>Streamline inventory control, order fulfillment, and warehouse operations. Improve accuracy and reduce labor costs with intelligent automation.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Fleet Management Software</h3>
+                    <p>Monitor driver activity, track vehicles, manage maintenance schedules, and ensure DOT compliance. Maximize fleet efficiency and safety.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Supply Chain Management (SCM)</h3>
+                    <p>End-to-end visibility across your entire supply chain. Automate procurement, supplier management, and demand forecasting.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Order Management Systems (OMS)</h3>
+                    <p>Automate order processing from collection to delivery. Integrate with your existing systems for seamless operations.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Custom Integrations</h3>
+                    <p>Connect disparate systems, automate data flows, and eliminate manual data entry. We integrate with any platform or API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Advanced Consulting?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <h3>You Own The Code</h3>
+                    <p>No vendor lock-in. No ongoing licenses. Complete control over your software.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Rapid Development</h3>
+                    <p>See results in weeks, not months. Agile sprints with early demos that build confidence.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Cost Effective</h3>
+                    <p>Up to 30% less expensive than traditional vendors. Transparent pricing with no hidden fees.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🇺🇸</div>
+                    <h3>U.S.-Based Team</h3>
+                    <p>Work directly with experienced developers who understand your business and timezone.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📞</div>
+                    <h3>Always Responsive</h3>
+                    <p>We answer the phone. No waiting days for support. Your success is our priority.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Built To Scale</h3>
+                    <p>Software that grows with your business. Easy to modify and expand as needs change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Our Development Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Discovery & Planning</h3>
+                    <p>We learn about your processes, pain points, and opportunities. Get a detailed estimate and timeline.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Design & Mockups</h3>
+                    <p>Interactive prototypes of your solution. Iterate until we get it exactly right.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Agile Development</h3>
+                    <p>Regular sprints with demos every 2 weeks. See progress and provide feedback throughout.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Testing & Deployment</h3>
+                    <p>Rigorous testing ensures quality. Smooth deployment with training and documentation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h3>Support & Growth</h3>
+                    <p>Ongoing support and enhancements as your business evolves. We're partners in your success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready To Transform Your Logistics Operations?</h2>
+            <p>Get a free consultation and ballpark estimate for your custom software project</p>
+            <a href="#contact" class="cta-button">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="form-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Ballpark Estimate</h2>
+            <div class="contact-form">
+                <form id="estimateForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="solution">What Solution Are You Looking For? *</label>
+                        <select id="solution" name="solution" required>
+                            <option value="">Select an option...</option>
+                            <option value="tms">Transportation Management System (TMS)</option>
+                            <option value="wms">Warehouse Management System (WMS)</option>
+                            <option value="fleet">Fleet Management Software</option>
+                            <option value="scm">Supply Chain Management (SCM)</option>
+                            <option value="oms">Order Management System (OMS)</option>
+                            <option value="integration">System Integration</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Tell Us About Your Current Challenges *</label>
+                        <textarea id="details" name="details" placeholder="Describe your current software challenges, manual processes, or what you're hoping to achieve..." required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button" style="width: 100%;">Get Free Estimate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Advanced Consulting LLC</h4>
+                    <p>Custom Software Development<br>
+                    Logistics & Supply Chain Solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@advancedconsulting.io<br>
+                    Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p>Custom Software Development<br>
+                    System Integration<br>
+                    Mobile & Web Applications</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Advanced Consulting LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('estimateForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send to your server
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            alert('Thank you! We\'ll contact you within 24 hours with your free estimate.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
